@@ -1,0 +1,37 @@
+/* I prefer Darker Theme so the background is easy on the eyes. */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 30px;
+  text-align: center;
+  margin: 0;
+}
+/* Header Style*/
+header {
+  background-color: #1f1f1f;
+  color: #00bcd4;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+/* Main content style */
+main {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  max-width: 500px;
+  margin: auto;
+}
+/* Paragraph Text Style */
+p {
+  font-size: 18px;
+  color: #cccccc;
+  margin: 12px 0;
+}
+/* Header inside main content */
+h2 {
+  color: #03dac6;
+}
