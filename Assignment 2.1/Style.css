@@ -1,0 +1,84 @@
+/* Base Styles */
+body {
+  background: linear-gradient(to bottom right, #0d0d1a, #1c1b2f);
+  color: #e0d6ff;
+  font-family: 'Cinzel', 'Georgia', serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #1a1129;
+  padding: 24px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(160, 100, 255, 0.4);
+  border-bottom: 2px solid #5e3ea1;
+}
+
+h1 {
+  color: #d6bfff;
+  font-size: 2.2em;
+  margin: 0;
+  text-shadow: 0 0 8px #8f5eff;
+}
+
+/* Slideshow Container */
+#slideshow {
+  width: 720px;
+  height: 460px;
+  margin: 0 auto;
+  border: 4px solid #8a2be2;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(#100720, #000);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image Styling */
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Navigation Buttons */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+button {
+  background: linear-gradient(to bottom, #6a0dad, #4b0082);
+  color: #fff;
+  border: 2px solid #b392ff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(160, 100, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #8a2be2;
+  transform: scale(1.06);
+  box-shadow: 0 0 12px #c3a3ff;
+}
+
+button:active {
+  background: #5e00b4;
+  transform: scale(0.97);
+  box-shadow: 0 0 8px #aa8cff inset;
+}
