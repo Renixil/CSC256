@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS for fantasy-style styling -->
+    <link rel="stylesheet" href="main.css">
+    <title>Hero Info</title>
+</head>
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>Hero Information</h1>
+    </header>
 
+    <!-- Main content area -->
+    <main>
+       <section>
+            <h2>Enter Hero Info</h2>
+
+            <!-- Hero information input form -->
+            <form name="frmHero" id="frmHero" method="post" action="#" onsubmit="return processHeroInfo();">
+                <!-- Username Info -->
+                <label for="txtName">Hero: </label>
+                <input type="text" id="txtName" name="txtName" placeholder="Astarion">
+                <!-- Race Info -->
+                <label for="txtRace">Race: </label>
+                <input type="text" id="txtRace" name="txtRace" placeholder="High-Elf Vampire">
+                <!-- Class Info -->
+                <label for="txtClass">Class: </label>
+                <input type="text" id="txtClass" name="txtClass" placeholder="Rogue">
+                <!-- Weapon Info -->
+                <label for="txtWeapons">Weapons: </label>
+                <input type="text" id="txtWeapons" name="txtWeapons" placeholder="Dagger">
+                <!-- Submit Button  -->
+                <input type="Submit" value="Save info">
+            </form>
+
+            <!-- Output section to display hero data -->
+            <div id="divOutput">
+                <h2>Hero Info</h2>
+                <div id="divHeroInfo"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

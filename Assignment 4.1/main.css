@@ -1,0 +1,97 @@
+/* Use default serif font for a fantasy vibe */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-repeat: repeat;
+    color: #f5ecd4;
+    padding: 2rem;
+    margin: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #3a2e2e;
+    padding: 1.5rem;
+    border-bottom: 4px solid #704f3a;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #e0c097;
+    letter-spacing: 1px;
+}
+
+/* Main layout area */
+main {
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #282020;
+    border: 2px solid #704f3a;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(112, 79, 58, 0.5);
+}
+
+/* Section headings */
+h2 {
+    color: #ddb67d;
+    border-bottom: 1px solid #6b4c3b;
+    padding-bottom: 0.5rem;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    color: #c9b28f;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 0.6rem;
+    margin-top: 0.25rem;
+    border: 2px solid #6b4c3b;
+    border-radius: 5px;
+    background-color: #3b3b3b;
+    color: #fffbd5;
+    font-size: 1rem;
+}
+
+/* Button styling */
+input[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #7a5833;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #a87b4e;
+}
+
+/* Output box */
+#divOutput {
+    display: none;
+    margin-top: 2rem;
+    background-color: #1e1e1e;
+    border: 2px dashed #ddb67d;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+#divHeroInfo {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
