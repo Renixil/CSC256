@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dead Together</title>
+  <link rel="stylesheet" href="Styles.css"/>
+<script defer src="scripts/constants.js"></script>
+<script defer src="scripts/state.js"></script>
+<script defer src="scripts/ui.js"></script>
+<script defer src="scripts/dialogue.js"></script>
+<script defer src="scripts/dice.js"></script>
+<script defer src="scripts/game.js"></script>
+<script defer src="scripts/main.js"></script>
+
+</head>
+<body>
+
+  <!-- ======= START SCREEN ======= -->
+  <div id="start-screen" class="screen">
+    <div class="panel">
+      <h1>Dead Together</h1>
+      <div class="menu-buttons">
+        <button id="btn-start" class="ui-btn">Start Game</button>
+        <button id="btn-how" class="ui-btn">How to Play</button>
+        <button id="btn-credits" class="ui-btn">Credits</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= HOW TO PLAY ======= -->
+  <div id="how-screen" class="screen hidden">
+    <div class="panel">
+      <h2>How to Play</h2>
+      <ul class="how-list">
+        <li><strong>Characters:</strong> Reyna (Perceptive, adaptable) & Arthur (Strong, relentless).</li>
+        <li><strong>Morale:</strong> Your moral standing. Choices can raise/lower it.</li>
+        <li><strong>Companion Trust:</strong> Keep allies on your side; actions affect trust.</li>
+        <li><strong>Time & Location:</strong> Tracked at the top; story reacts to it.</li>
+        <li><strong>Bag:</strong> Bottom-left. Opens inventory.</li>
+        <li><strong>Settings:</strong> Bottom-right. Restart, return to game, or go Home.</li>
+        <li><strong>Stat Checks (d20):</strong> Only appear on choices that require a roll. Click to roll; meet or exceed the DC to succeed.</li>
+        <li><strong>Dialogue:</strong> Left Click the dialogue below to progress and make decisions.</li>
+      </ul>
+      <button id="how-back" class="ui-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- ======= CREDITS ======= -->
+  <div id="credits-screen" class="screen hidden">
+    <div class="panel">
+      <h2>Credits</h2>
+      <p>Thanks to OpenAI for guidance, corrections, and additional systems, dialogue generation.</p>
+      <p>Concept, direction & coding by <strong>John Arcagua</strong>.</p>
+      <button id="credits-back" class="ui-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- ======= CHARACTER SELECT (only after "Start Game") ======= -->
+  <div id="character-select" class="screen hidden">
+    <div class="panel">
+      <h2>Choose Your Character</h2>
+      <div class="char-buttons">
+        <button class="ui-btn" data-char="Reyna">Reyna</button>
+        <button class="ui-btn" data-char="Arthur">Arthur</button>
+      </div>
+      <p class="char-note">Reyna — Perceptive, adaptable. Arthur — Strong, relentless.</p>
+      <button id="char-cancel" class="ui-btn ghost">Back</button>
+    </div>
+  </div>   
+
+  <!-- ======= MAIN GAME UI (only after selecting a character) ======= -->
+  <div id="game-ui" class="hidden">
+
+    <!-- Top-left: time + morality -->
+    <div id="top-ui">
+      <div id="time-display">6:00 AM — Saturday</div>
+      <div id="morality-bar" title="Morality">
+        <div id="morality-fill"></div>
+      </div>
+    </div>
+
+    <!-- Top-right: location -->
+    <div id="location-badge">Home — Bedroom</div>
+
+    <!-- Left: companion trust -->
+    <div id="companions-ui">
+      <p class="ui-title">Trust Meters</p>
+      <div class="companion" id="trust-reyna">Reyna: <span>100</span>%</div>
+      <div class="companion" id="trust-arthur">Arthur: <span>100</span>%</div>
+      <div class="companion" id="trust-kane">Kane: <span>100</span>%</div>
+      <div class="companion" id="trust-clarissa">Clarissa: <span>100</span>%</div>
+    </div>
+
+    <!-- Scene -->
+    <div id="scene">
+      <img id="scene-img" src="" alt="Scene"/>
+    </div>
+
+    <!-- Dialogue & Choices -->
+    <div id="dialogue-box">
+      <p id="dialogue-text">Welcome to Dead Together</p>
+      <div id="choices"></div>
+    </div>
+
+    <!-- Bag -->
+    <div id="bag-ui" title="Open Bag">Bag</div>
+    <div id="bag-overlay" class="overlay hidden">
+      <h3>Inventory</h3>
+      <ul id="bag-items"></ul>
+      <button id="bag-close" class="ui-btn">Close</button>
+    </div>
+
+    <!-- Settings -->
+    <div id="menu-button" title="Menu">☰</div>
+    <div id="menu-overlay" class="overlay hidden">
+      <button id="menu-restart" class="ui-btn danger">Restart Game</button>
+      <button id="menu-home" class="ui-btn">Return to Home</button>
+      <button id="menu-return" class="ui-btn">Return to Game</button>
+    </div>
+
+    <!-- D20 Overlay -->
+    <div id="dice-overlay" class="screen hidden">
+      <div class="panel dice">
+        <p id="dice-prompt">Rolling d20…</p>
+        <p id="dice-threshold"></p>
+        <button id="dice-roll" class="ui-btn">Roll</button>
+        <p id="dice-result"></p>
+        <button id="dice-confirm" class="ui-btn hidden">Continue</button>
+      </div>
+    </div>
+    
+    <div id="player-stats">
+  <h3 id="player-name"></h3>
+  <div id="stats-container">
+  </div>
+</div>
+  </div>
+
+</body>
+</html>
